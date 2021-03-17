@@ -1,0 +1,4 @@
+ROLE=main/backup/sorry
+MYIP=10.0.0.1
+FAILSTART=30
+
