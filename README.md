@@ -2,29 +2,22 @@
 
 ## Install
 ~~~
-# apt install uwsgi uwsgi-plugin-python3
+# apt install uwsgi uwsgi-plugin-python3 nginx
 # python3 -m venv /opt/venv/okerr-cat
 # cd /opt/venv/okerr-cat
 # . bin/activate
 (okerr-cat)# mkdir run
 (okerr-cat)# chown www-data:www-data run
-(okerr-cat)# pip3 install /tmp/okerr_cat...whl
+(okerr-cat)# pip3 install git+https://github.com/yaroslaff/okerr-cat
 (okerr-cat)# cp contrib/okerr-cat.default /etc/default/okerr-cat
 (okerr-cat)# ln -s /opt/venv/okerr-cat/contrib/okerr-cat.service /etc/systemd/system
 (okerr-cat)# cp contrib/okerr-cat.nginx /etc/nginx/sites-available/okerr-cat
 (okerr-cat)# ln -s /etc/nginx/sites-available/okerr-cat /etc/nginx/sites-enabled/
 (okerr-cat)#
-(okerr-cat)#
-(okerr-cat)#
-(okerr-cat)#
-(okerr-cat)#
-(okerr-cat)#
-(okerr-cat)#
-
 ~~~
 
 ## Configuration
-Cat uses environment variables `ROLE`, `MYIP`, `FAILSTART`
+Cat uses environment variables `ROLE`, `MYIP`, `FAILSTART`. You can configure it in /etc/default/okerr-cat
 
 ## Development start
 As any other simple Flask application.
