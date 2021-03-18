@@ -13,11 +13,20 @@
 (okerr-cat)# ln -s /opt/venv/okerr-cat/contrib/okerr-cat.service /etc/systemd/system
 (okerr-cat)# cp contrib/okerr-cat.nginx /etc/nginx/sites-available/okerr-cat
 (okerr-cat)# ln -s /etc/nginx/sites-available/okerr-cat /etc/nginx/sites-enabled/
-(okerr-cat)#
+(okerr-cat)# systemctl enable okerr-cat
+(okerr-cat)# systemctl status okerr-cat
+(okerr-cat)# systemctl reload nginx
+~~~
+
+## Upgrade
+~~~
+# /opt/venv/okerr-cat/bin/activate
+# pip3 install -U git+https://github.com/yaroslaff/okerr-cat
+# systemctl restart okerr-cat
 ~~~
 
 ## Configuration
-Cat uses environment variables `ROLE`, `MYIP`, `FAILSTART`. You can configure it in /etc/default/okerr-cat
+Okerr-cat uses environment variables `ROLE`, `MYIP`, `FAILSTART`. You can configure it in /etc/default/okerr-cat
 
 ## Development start
 As any other simple Flask application.
