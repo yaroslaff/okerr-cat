@@ -18,10 +18,17 @@
 (okerr-cat)# systemctl reload nginx
 ~~~
 
+If you will use wildcard DNS certificates may also need to install:
+~~~
+apt install dehydrated
+pip3 install dns-lexicon
+~~~
+
 ## Upgrade
 ~~~
 # /opt/venv/okerr-cat/bin/activate
 # pip3 install -U git+https://github.com/yaroslaff/okerr-cat
+# systemctl daemon-reload
 # systemctl restart okerr-cat
 ~~~
 

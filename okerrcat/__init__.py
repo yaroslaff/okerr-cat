@@ -25,7 +25,8 @@ def nsresolve(hostname, ns=None, qtype='a'):
         return None
 
 def myip():
-    url = 'https://diagnostic.opendns.com/myip'
+    # url = 'https://diagnostic.opendns.com/myip'
+    url = 'https://ifconfig.me/'
 
     while True:
         try:
