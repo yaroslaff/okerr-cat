@@ -1,4 +1,9 @@
+# set one proper role name
 ROLE=main/backup/sorry
+
+# replace to actual IP address
 MYIP=10.0.0.1
+
+# if specified, will start to fail after this minute every hour
 FAILSTART=30
 
