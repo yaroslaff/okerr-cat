@@ -44,6 +44,16 @@ $ flask run
 $ flask run --host=0.0.0.0
 ~~~
 
+## Cheatsheet
+
+### Get cloudflare wildcard certificate
+
+- `pip3 install certbot-dns-cloudflare`
+- `certbot plugins`
+- https://dash.cloudflare.com/profile/api-tokens  (User Profile > API Tokens)
+- `/etc/my/cloudflare.ini`: `dns_cloudflare_api_token = ...`
+- `certbot certonly --dns-cloudflare --dns-cloudflare-credentials /etc/my/cloudflare.ini --dns-cloudflare-propagation-seconds 60 -d "cat.okerr.com" -d "*.cat.okerr.com"`
+
 # Other okerr resources
 - [Okerr main website](https://okerr.com/)
 - [Okerr-server source code repository](https://github.com/yaroslaff/okerr-dev/) 
